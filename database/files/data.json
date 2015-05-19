@@ -1,0 +1,47 @@
+{
+	"domains": {
+		"shinagawa.5374.codeforoedo.org": "tokyo/shinagawa",
+		"shinagawa.tokyo.5374.jp": "tokyo/shinagawa",
+
+		"demo.5374.codeforoedo.org": "demo/1",
+
+		"*": "demo/1"
+	},
+
+	"data": {
+		"tokyo/shinagawa": {
+			"settings": {
+				"title": "5374品川区版",
+				"": ""
+			},
+
+			"files": {
+				"area_days.csv": "http://data.5374.codeforoedo.org/tokyo/shinagawa/area_days.csv",
+				"center.csv": "http://data.5374.codeforoedo.org/tokyo/shinagawa/center.csv",
+				"description.csv": "http://data.5374.codeforoedo.org/tokyo/shinagawa/description.csv",
+				"remarks.csv": "http://data.5374.codeforoedo.org/tokyo/shinagawa/remarks.csv",
+				"target.csv": "http://data.5374.codeforoedo.org/tokyo/shinagawa/target.csv"
+			},
+
+			"": ""
+		},
+
+		"demo/1": {
+			"settings": {
+				"title": "5374デモ",
+				"": ""
+			},
+
+			"files": {
+				"area_days.csv": "http://data.5374.codeforoedo.org/demo/1/area_days.csv",
+				"center.csv": "http://data.5374.codeforoedo.org/demo/1/center.csv",
+				"description.csv": "http://data.5374.codeforoedo.org/demo/1/description.csv",
+				"remarks.csv": "http://data.5374.codeforoedo.org/demo/1/remarks.csv",
+				"target.csv": "http://data.5374.codeforoedo.org/demo/1/target.csv"
+			},
+
+			"": ""
+		}
+	}
+
+}
