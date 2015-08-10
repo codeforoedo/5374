@@ -3,6 +3,9 @@
 		"shinagawa.5374.codeforoedo.org": "tokyo/shinagawa",
 		"shinagawa.tokyo.5374.jp": "tokyo/shinagawa",
 
+		"ota.5374.codeforoedo.org": "tokyo/ota",
+		"ota.tokyo.5374.jp": "tokyo/ota",
+
 		"demo.5374.codeforoedo.org": "demo/1",
 
 		"*": "demo/1"

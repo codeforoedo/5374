@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 cd `dirname $0`
-source .env
+
+DEPLOY_HOST=s2app@orion03-deploy
+DEPLOY_APP_PATH=/var/host/apps/5374
 
 
 
@@ -17,11 +19,15 @@ deploy() {
 
 	echo
 	echo [1] Program Store...
-	rsync -av --delete ./ ${DEPLOY_HOST}:${DEPLOY_APP_PATH} --rsync-path="${DEPLOY_RSYNC_PATH:-rsync}" --exclude=.env* --exclude=deploy --exclude=/storage --exclude=/vendor --exclude=.git* --exclude=.DS_Store
+	rsync -av --delete ./ ${DEPLOY_HOST}:${DEPLOY_APP_PATH} --exclude=.env* --exclude=deploy --exclude=/storage --exclude=/vendor --exclude=.git* --exclude=.DS_Store
 
 	echo
 	echo [2] Storage Store...
-	rsync -av ./storage/ ${DEPLOY_HOST}:${DEPLOY_APP_PATH}/storage --rsync-path="${DEPLOY_RSYNC_PATH:-rsync}" --exclude=.DS_Store
+	rsync -av ./storage/ ${DEPLOY_HOST}:${DEPLOY_APP_PATH}/storage --exclude=.DS_Store
+
+	echo
+	echo [3] Copy env.production
+	rsync -av ./.env.production ${DEPLOY_HOST}:${DEPLOY_APP_PATH}/.env
 
 	echo
 	echo デプロイ完了
