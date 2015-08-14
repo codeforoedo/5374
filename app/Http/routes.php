@@ -14,7 +14,3 @@
 $app->get('/', function() use ($app) {
     return $app->welcome();
 });
-
-$app->group(['prefix' => '/data', 'namespace' => 'App\Http\Controllers'], function($app) {
-	$app->get('', 'DataController@queryByReferer');
-});
